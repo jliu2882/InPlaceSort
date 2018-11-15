@@ -3,10 +3,14 @@ package jliu2882;
 public class Main {
 
     public static void main(String[] args) {
-        int[] num = randIntArr(4);
-        selectionSort(num);
+        int[] num = randIntArr(10);
         for(int i = 0; i < num.length ; i++){
-            System.out.println(num[i]);
+            System.out.print(num[i] + " ");
+        }
+        System.out.println("");
+        insertionSort(num);
+        for(int i = 0; i < num.length ; i++){
+            System.out.print(num[i] + " ");
         }
     }
 
@@ -24,7 +28,7 @@ public class Main {
         int[] arr;
         arr = new int[count];
         for(int i = 0; i < arr.length; i++){
-            arr[i] = randInt(10000);
+            arr[i] = randInt(9);
         }
         return arr;
     }
@@ -46,6 +50,17 @@ public class Main {
                     swap(arr,i,j);
                 }
             }
+        }
+    }
+
+    public static void insertionSort(int[] arr){
+        for(int i = 1; i < arr.length; i ++){
+            int temp = arr[i];
+            int j;
+            for(j = i-1; j>=0 && temp  < arr[j]; j--){
+                arr[j+1] = arr[j];
+            }
+            arr[j+1] = temp;
         }
     }
 }
