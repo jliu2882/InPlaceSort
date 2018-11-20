@@ -49,6 +49,25 @@ public class Runner {
         }
         endTime = System.nanoTime();
         System.out.println("\n Bubble sort took " + ((endTime-startTime)/1e6) + " milliseconds");
+
+
+        System.out.println("");
+
+
+        startTime = System.nanoTime();
+        int[] list4 = {8,4,8,9,7,2,2,3,3,4};
+                //InPlaceSorts.randIntArr(10,9);
+        for(int i = 0; i < list4.length ; i++){
+            System.out.print(list4[i] + " ");
+        }
+        System.out.println("");
+        InPlaceSorts.mergeSort(list4);
+        for(int i = 0; i < list4.length ; i++){
+            System.out.print(list4[i] + " ");
+        }
+        endTime = System.nanoTime();
+        System.out.println("\n Merge sort took " + ((endTime-startTime)/1e6) + " milliseconds");
+
     }
 
 
