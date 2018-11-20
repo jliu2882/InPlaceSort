@@ -105,35 +105,28 @@ public class InPlaceSorts {
         int i = left;
         int j = mid + 1;
         int k = left;
-        while (i <= mid && j <= right)
-        {
-            if (arr[i] < arr[j])
-            {
+        while (i <= mid && j <= right) {
+            if (arr[i] < arr[j]) {
                 temp[k] = arr[i];
                 i++;
             }
-            else
-            {
+            else {
                 temp[k] = arr[j];
                 j++;
             }
             k++;
         }
-
-        while (i <= mid)
-        {
+        while (i <= mid){
             temp[k] = arr[i];
             i++;
             k++;
         }
-        while (j <= right)
-        {
+        while (j <= right){
             temp[k] = arr[j];
             j++;
             k++;
         }
-        for (k = left; k <= right; k++)
-        {
+        for (k = left; k <= right; k++){
             arr[k] = temp[k];
         }
     }
