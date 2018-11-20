@@ -55,8 +55,7 @@ public class Runner {
 
 
         startTime = System.nanoTime();
-        int[] list4 = {8,4,8,9,7,2,2,3,3,4};
-                //InPlaceSorts.randIntArr(10,9);
+        int[] list4 = InPlaceSorts.randIntArr(10,9);
         for(int i = 0; i < list4.length ; i++){
             System.out.print(list4[i] + " ");
         }
