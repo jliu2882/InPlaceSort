@@ -1,7 +1,5 @@
 package jliu2882;
-
 public class Runner {
-
     public static void main(String[] args) {
         int count = 10;
 
@@ -53,8 +51,5 @@ public class Runner {
         for(int i=0;i<list5.length;i++){System.out.print(list5[i]+" ");}
         endTime=System.nanoTime();
         System.out.println("\n Quick sort : "+((endTime-startTime)/1e6)+" ms\n");
-
     }
-
-
 }
