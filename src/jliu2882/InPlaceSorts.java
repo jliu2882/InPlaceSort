@@ -1,5 +1,4 @@
 package jliu2882;
-
 public class InPlaceSorts {
     public static void swap(int list1[], int i, int j){
         int temp = list1[i];
